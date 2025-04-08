@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación de la Tienda</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: hsl(240, 11%, 2%);
+            background-image: url('imgs/fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: #d2691e;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #d2691e;
+        }
+
+        .informacion-tienda {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .ubicacion {
+            text-align: center;
+            margin: 20px auto;
+            color: #ff9800;
+        }
+
+        button {
+            background-color: #d2691e;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e68a00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: #ff9800;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="tiendaNombre"></h1>
+    </header>
+
+    <main>
+        <section class="informacion-tienda">
+            <h2>Información de la Tienda</h2>
+            <p><strong>Dirección:</strong> <span id="direccion"></span></p>
+            <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+            <p><strong>Email:</strong> <a href="" id="email"></a></p>
+
+            <h3>Horarios de Atención</h3>
+            <ul id="horarios"></ul>
+        </section>
+
+        <section class="ubicacion">
+            <h3>Ubicación</h3>
+            <iframe id="ubicacionMapa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <button onclick="window.location.href='../index.html'">Regresar</button>
+
+    <footer>
+        <p>&copy; 2024 Cafetería. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Información de la tienda
+        const tienda = {
+            nombre: 'Descubre donde nos encontramos!',
+            direccion: 'Avenida de la Belleza, 123, Ciudad Bella',
+            telefono: '+34 123 456 789',
+            email: 'contacto@bellezanatural.com',
+            horarios: {
+                lunes: '10:00 - 20:00',
+                martes: '10:00 - 20:00',
+                miércoles: '10:00 - 20:00',
+                jueves: '10:00 - 20:00',
+                viernes: '10:00 - 21:00',
+                sábado: '11:00 - 21:00',
+                domingo: 'Cerrado'
+            },
+            ubicacion_mapa: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509184!2d144.95373531531865!3d-37.81627997975186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f123f97%3A0x5045675218cd1c0!2sAvenida%20de%20la%20Belleza%2C%20123%2C%20Ciudad%20Bella!5e0!3m2!1ses!2ses!4v1617984000000!5m2!1ses!2ses'
+        };
+
+        // Mostrar la información de la tienda
+        document.getElementById('tiendaNombre').textContent = tienda.nombre;
+        document.getElementById('direccion').textContent = tienda.direccion;
+        document.getElementById('telefono').textContent = tienda.telefono;
+        document.getElementById('email').href = `mailto:${tienda.email}`;
+        document.getElementById('email').textContent = tienda.email;
+
+        // Mostrar horarios de atención
+        const horariosList = document.getElementById('horarios');
+        for (let dia in tienda.horarios) {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${dia.charAt(0).toUpperCase() + dia.slice(1)}:</strong> ${tienda.horarios[dia]}`;
+            horariosList.appendChild(li);
+        }
+
+        // Mostrar mapa de ubicación
+        document.getElementById('ubicacionMapa').src = tienda.ubicacion_mapa;
+    </script>
+</body>
+
+</html>

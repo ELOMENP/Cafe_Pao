@@ -1,0 +1,23 @@
+<style>
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+.disponible {
+    background-color: #a8e6a1; /* Verde claro */
+}
+.agotado {
+    background-color: #ff8c8c; /* Rojo claro */
+}
+</style>

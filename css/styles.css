@@ -1,0 +1,326 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f6f2;
+    color: #000;
+    
+}
+
+/* Sección de introducción */
+.intro-section {
+    background-color: #fff3e6;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.intro-section h1 {
+    font-size: 2.5em;
+    color: #d2691e;
+    margin-bottom: 20px;
+}
+
+.intro-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #000; /* Cambiar color del texto a negro */
+}
+
+.intro-section .intro-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #d2691e;
+}
+
+/* Botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.button-container button {
+    background-color: #d2691e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-container button:hover {
+    background-color: #a0522d;
+    transform: scale(1.05);
+}
+
+.button-container button:active {
+    background-color: #8b4513;
+}
+
+/* Formulario de pedidos */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+form h1 {
+    text-align: center;
+    color: #d2691e;
+    margin-bottom: 20px;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input, 
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+form input:focus, 
+form textarea:focus {
+    outline: none;
+    border-color: #d2691e;
+    box-shadow: 0 0 5px rgba(210, 105, 30, 0.5);
+}
+
+form button {
+    display: block;
+    width: 100%;
+    background-color: #d2691e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #a0522d;
+    transform: scale(1.05);
+}
+
+form button:active {
+    background-color: #8b4513;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .intro-section h1,
+    form h1 {
+        font-size: 2em;
+    }
+
+    .intro-section p,
+    form label {
+        font-size: 1em;
+    }
+
+    .button-container button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Estilo general */
+body {
+    background-color: #000000; /* Negro oscuro */
+    color: #f8b500; /* Naranja cálido */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #000000; /* Negro sólido */
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #f8b500; /* Naranja cálido */
+    margin: 0;
+}
+
+/* Botones de navegación */
+.button-container button {
+    background-color: #f8b500; /* Naranja */
+    color: #1a1a1a; /* Negro */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button-container button:hover {
+    background-color: #ff9800; /* Naranja más claro */
+}
+
+/* Sección de productos */
+h3 {
+    color: #ff9800; /* Naranja más claro */
+    text-align: center;
+}
+
+.productos-cuadro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.producto {
+    background-color: #262626; /* Gris oscuro */
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 5px;
+    width: 200px;  /* Ajusta el tamaño según lo que prefieras */
+    height: 200px; /* Ajusta el tamaño según lo que prefieras */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción sin deformarse */
+}
+
+.producto h3 {
+    color: #ff9800;
+}
+
+.producto p {
+    color: #ffffff;
+}
+
+.producto button {
+    background-color: #f8b500;
+    color: #1a1a1a;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.producto button:hover {
+    background-color: #ff9800;
+}
+
+/* Carrito */
+.carrito {
+    background-color: #1a1a1a;
+    border: 1px solid #ff9800;
+    padding: 20px;
+    margin: 20px;
+    color: #ffffff;
+}
+
+.carrito ul {
+    list-style: none;
+    padding: 0;
+}
+
+.carrito li {
+    border-bottom: 1px solid #f8b500;
+    padding: 5px 0;
+}
+
+.carrito p {
+    font-weight: bold;
+    color: #f8b500;
+}
+
+.carrito button {
+    background-color: #f8b500;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.carrito button:hover {
+    background-color: #ff9800;
+}
+
+/* Mensaje de compra */
+.mensaje p {
+    color: #ff5722;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #343a40;
+    color: #f8b500;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+/* Estilo para el botón de regresar */
+button.regresar {
+    background-color: #FFA500; /* Naranja */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.regresar:hover {
+    background-color: #FF8C00; /* Naranja más oscuro al hacer hover */
+}
+
+.login-button {
+    background-color: #d2691e; /* Color marrón claro tipo caramelo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambiar a cursor tipo mano */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; /* Suavidad en la transición del color */
+}
+
+.login-button:hover {
+    background-color: #e68a00; /* Color marrón más oscuro al pasar el mouse */
+}
+
+.login-button:active {
+    background-color: #bf5700; /* Color más oscuro al presionar */
+    transform: scale(0.95); /* Efecto de presión */
+}

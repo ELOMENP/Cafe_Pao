@@ -1,0 +1,85 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(240, 11%, 2%);
+    background-image: url('imgs/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #d2691e;;
+    color: hsl(60, 20%, 1%);
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffc107;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #030303;
+}
+
+.informacion-tienda {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Centrar el contenedor */
+}
+
+.ubicacion {
+    text-align: center;
+    margin: 20px auto;
+}
+
+button {
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0a800;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #d2691e; /* Color de fondo */
+    color: #d2691e;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 60px; /* Añadir margen superior para separarlo del contenido */
+}
