@@ -1,0 +1,180 @@
+
+/* ==================================
+   CAFE PAO - OPINIONES Y CALIFICACIONES
+   Archivo: css/resenas.css
+================================== */
+
+.resenas-header {
+    background-color: #000;
+    color: #f8b500;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.resenas-header h1 {
+    color: #f8b500;
+    margin-top: 0;
+}
+
+.resenas-header p {
+    color: #fff;
+}
+
+.resenas-contenedor {
+    width: 92%;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.resenas-panel {
+    background-color: #262626;
+    color: #fff;
+    border: 1px solid #d2691e;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.resenas-panel h2,
+.resenas-panel h3 {
+    color: #f8b500;
+}
+
+.resenas-panel label {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    margin: 12px 0 6px;
+}
+
+.resenas-panel input,
+.resenas-panel textarea,
+.resenas-panel select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #777;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #111;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.resenas-panel textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.resenas-panel input:focus,
+.resenas-panel textarea:focus,
+.resenas-panel select:focus {
+    outline: 2px solid #f8b500;
+    border-color: #d2691e;
+}
+
+.resenas-panel button,
+.resenas-regresar button {
+    background-color: #f8b500;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 18px;
+    margin-top: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.resenas-panel button:hover,
+.resenas-regresar button:hover {
+    background-color: #ff9800;
+}
+
+.resenas-panel button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.resenas-mensaje {
+    color: #f8b500;
+    overflow-wrap: anywhere;
+}
+
+.resenas-promedio {
+    background-color: #1a1a1a;
+    border: 1px solid #d2691e;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    margin: 18px 0;
+}
+
+#promedio-estrellas {
+    display: block;
+    color: #f8b500;
+    font-size: 1.5rem;
+    margin: 8px 0;
+}
+
+.resenas-lista {
+    display: grid;
+    gap: 15px;
+}
+
+.resena-tarjeta {
+    background-color: #1a1a1a;
+    border: 1px solid #555;
+    border-left: 4px solid #d2691e;
+    border-radius: 7px;
+    padding: 16px;
+    overflow-wrap: anywhere;
+}
+
+.resena-tarjeta h3 {
+    margin-top: 0;
+    color: #f8b500;
+}
+
+.resena-tarjeta p {
+    color: #fff;
+    white-space: pre-wrap;
+}
+
+.resena-estrellas {
+    color: #f8b500 !important;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.resena-fecha {
+    color: #ccc !important;
+    font-size: 0.85rem;
+}
+
+.resenas-regresar {
+    text-align: center;
+    margin: 25px 0;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .resenas-contenedor {
+        width: 95%;
+    }
+
+    .resenas-panel {
+        padding: 16px;
+    }
+
+    .resenas-panel button,
+    .resenas-regresar button {
+        width: 100%;
+    }
+}
