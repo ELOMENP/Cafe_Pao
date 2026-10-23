@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniones - Café Pao</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/resenas.css">
+</head>
+
+<body>
+    <header class="resenas-header">
+        <h1>Opiniones de Café Pao</h1>
+        <p>Cuéntanos cómo fue tu experiencia.</p>
+    </header>
+
+    <main class="resenas-contenedor">
+        <section id="zona-cuenta" class="resenas-panel">
+            <h2>Tu cuenta</h2>
+            <p id="mensaje-cuenta" class="resenas-mensaje" aria-live="polite"></p>
+
+            <form id="form-registro">
+                <h3>Crear una cuenta</h3>
+
+                <label for="nombre-registro">Nombre</label>
+                <input id="nombre-registro" type="text"
+                       maxlength="50" autocomplete="name" required>
+
+                <label for="correo-registro">Correo electrónico</label>
+                <input id="correo-registro" type="email"
+                       autocomplete="email" required>
+
+                <label for="clave-registro">Contraseña</label>
+                <input id="clave-registro" type="password"
+                       minlength="6" autocomplete="new-password" required>
+
+                <button type="submit">Registrarme</button>
+            </form>
+
+            <form id="form-login">
+                <h3>Iniciar sesión</h3>
+
+                <label for="correo-login">Correo electrónico</label>
+                <input id="correo-login" type="email"
+                       autocomplete="email" required>
+
+                <label for="clave-login">Contraseña</label>
+                <input id="clave-login" type="password"
+                       autocomplete="current-password" required>
+
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        </section>
+
+        <section id="zona-usuario" class="resenas-panel" hidden>
+            <h2>Bienvenido, <span id="nombre-usuario"></span></h2>
+            <p>Ya puedes compartir tu opinión.</p>
+            <button id="cerrar-sesion" type="button">Cerrar sesión</button>
+        </section>
+
+        <section class="resenas-panel">
+            <h2>Califica tu experiencia</h2>
+            <p>Para publicar una opinión, primero debes iniciar sesión.</p>
+
+            <form id="form-resena">
+                <label for="calificacion">Calificación</label>
+                <select id="calificacion" required>
+                    <option value="">Selecciona las estrellas</option>
+                    <option value="5">★★★★★ - Excelente</option>
+                    <option value="4">★★★★☆ - Muy bueno</option>
+                    <option value="3">★★★☆☆ - Bueno</option>
+                    <option value="2">★★☆☆☆ - Regular</option>
+                    <option value="1">★☆☆☆☆ - Malo</option>
+                </select>
+
+                <label for="comentario">Tu comentario</label>
+                <textarea id="comentario" minlength="3"
+                          maxlength="500"
+                          placeholder="¿Qué te gustó de Café Pao?"
+                          required></textarea>
+
+                <button type="submit">Publicar opinión</button>
+            </form>
+
+            <p id="mensaje-resena" class="resenas-mensaje"
+               aria-live="polite"></p>
+        </section>
+
+        <section class="resenas-panel">
+            <h2>Opiniones de nuestros clientes</h2>
+
+            <div class="resenas-promedio">
+                <p>Calificación promedio</p>
+                <strong id="promedio-estrellas">Sin calificaciones</strong>
+                <p id="total-resenas">Todavía no hay opiniones.</p>
+            </div>
+
+            <div id="lista-resenas" class="resenas-lista">
+                <p>Cargando opiniones...</p>
+            </div>
+        </section>
+
+        <div class="resenas-regresar">
+            <button type="button"
+                    onclick="window.location.href='../index.html'">
+                Regresar al inicio
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Café Pao - Todos los derechos reservados</p>
+    </footer>
+
+    <script type="module" src="../js/resenas.js"></script>
+</body>
+</html>
